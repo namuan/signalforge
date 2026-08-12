@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+# Keep the lockfile: CI uses npm ci.
+!package-lock.json
+
+# Build and test output
+dist/
+lib/
+coverage/
+*.tsbuildinfo
+
+# Logs and temporary files
+*.log
+*.tmp
+.tmp/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
