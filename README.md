@@ -13,10 +13,12 @@ Clone Signalforge, install its development dependencies, then point its one OXLi
 git clone https://github.com/namuan/signalforge.git
 cd signalforge
 npm ci
-npm run lint -- ../my-project
+npm run lint -- /absolute/path/to/my-project
 ```
 
-Use `npm run lint:fix -- ../my-project` to apply available fixes. OXLint discovers `oxlint.config.ts`; no ESLint configuration is used.
+Use `npm run lint:fix -- /absolute/path/to/my-project` to apply available fixes. OXLint discovers `oxlint.config.ts`; no ESLint configuration is used.
+
+OXlint rejects relative paths containing `..` as a path-traversal guard, so point it at the target with an absolute path (or a symlink under the Signalforge directory) rather than `../my-project`.
 
 ## Included rules
 
