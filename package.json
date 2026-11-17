@@ -20,7 +20,8 @@
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "typecheck": "tsc --noEmit",
-    "check": "npm run typecheck"
+    "test": "node --experimental-strip-types tests/rules.test.ts",
+    "check": "npm run typecheck && npm test"
   },
   "devDependencies": {
     "@oxlint/plugins": "1.77.0",

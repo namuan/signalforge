@@ -36,9 +36,10 @@ Do not enable `signalforge/no-comments` with `signalforge/require-safety-comment
 ```sh
 npm ci
 npm run check
+npm run lint
 ```
 
-GitHub Actions runs the same check on pull requests and pushes to `main`.
+`npm run check` type-checks the plugin and runs its rule tests. The repository’s own rule implementations are exempt from Signalforge rules that govern target projects; built-in linting and type-checking still run. GitHub Actions runs both checks on pull requests and pushes to `main`.
 
 ## Acknowledgements
 
